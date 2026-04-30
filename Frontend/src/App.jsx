@@ -1,11 +1,22 @@
 import './App.css'
+import Favourites from './pages/Favourites.jsx'
 import Home from './pages/Home.jsx'
+import { Routes, Route } from 'react-router-dom'
+import NavBar from './components/NavBar.jsx'
 
 function App() {
 
   return (
     <>
-    <Home />
+      <div>
+        <NavBar />
+        <main className='main-content'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/favourites" element={<Favourites />} />
+          </Routes>
+        </main>
+      </div>
     </>
   )
 }
