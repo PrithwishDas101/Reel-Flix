@@ -17,8 +17,7 @@
 .watchlist-meta { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin: 2.5rem 0 1.5rem; }
 .watchlist-meta h2 { margin: 0; }
 .watchlist-meta > span { color: var(--muted); font: 10px 'DM Mono', monospace; letter-spacing: .13em; }
-@media (max-width: 480px) {
-  .favourites-heading { padding-bottom: 2.25rem; }
-  .favourites-empty { margin: 2.5rem 0; }
-  .watchlist-meta { align-items: flex-start; flex-direction: column; }
-}
+.favourites .movies-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 30px 18px; }
+@media (max-width: 1000px) { .favourites .movies-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px 15px; } }
+@media (max-width: 720px) { .favourites-heading { padding-bottom: 2.25rem; } .favourites-empty { margin: 2.5rem 0; } .watchlist-meta { align-items: flex-start; flex-direction: column; } .favourites .movies-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 13px; } }
+@media (max-width: 480px) { .favourites .movies-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 23px 13px; } }
